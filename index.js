@@ -11,6 +11,10 @@ app.use(cors({
 }));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('NextLevel shop server is running!');
+})
+
 // MongoDB URI from .env
 const uri = process.env.MONGO_URI;
 
